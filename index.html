@@ -1,94 +1,52 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learning Hub Sekolah - Smart TV</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0f172a;
-      color: #ffffff;
-    }
-    header {
-      padding: 20px;
-      text-align: center;
-      background: #020617;
-      font-size: 28px;
-      font-weight: bold;
-    }
-    .menu {
-      display: flex;
-      flex-direction: column;
-      max-width: 600px;
-      margin: 40px auto;
-      gap: 20px;
-    }
-    button {
-      padding: 25px;
-      font-size: 22px;
-      border: none;
-      border-radius: 12px;
-      background: #1e293b;
-      color: #fff;
-      cursor: pointer;
-    }
-    button:focus {
-      outline: 4px solid #38bdf8;
-      background: #334155;
-    }
-    .note {
-      text-align: center;
-      font-size: 16px;
-      opacity: 0.7;
-      margin-top: 30px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Learning Hub Sekolah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-  LEARNING HUB SEKOLAH<br>
-  <small style="font-size:16px;font-weight:normal;">Pascapelatihan</small>
-</header>
+  <header>
+    <h1>📺 Learning Hub Sekolah</h1>
+    <p>Pusat Materi Pelatihan & Pembelajaran</p>
+  </header>
 
-<div class="menu">
-  <!-- CANVA DIBUKA DI TAB BARU (ANTI REFUSE) -->
-  <button tabindex="0" onclick="location.href='https://www.canva.com/design/DAG90rWtbe8/view'">
-    📘 Materi Guru
-  </button>
+  <main class="menu">
+    <button onclick="openLink('https://www.canva.com/design/DAG90rWtbe8/mAhkLtH-lxFFLQJ8wbf36w/view')">
+      📘 Materi Pelatihan Guru
+    </button>
 
-  <button tabindex="0" onclick="location.href='https://www.canva.com/design/DAG-q0S-SA4/view'">
-    👨‍🎓 Materi Siswa
-  </button>
+    <button onclick="openLink('https://www.canva.com/design/DAG-q0S-SA4/kXiv6qP0UhverZFMXwQwyg/view')">
+      👨‍🎓 Belajar Kilat Koding & AI Kelas 5
+    </button>
 
-  <button tabindex="0" onclick="location.href='https://www.canva.com/design/DAG-Nn60U5c/view'">
-    💻 ELKAPEDE Kelas 5 SMT 2
-  </button>
+    <button onclick="openLink('https://www.canva.com/design/DAG-Nn60U5c/TPZ1WGNy90A31j84I83gOQ/view')">
+      💻 E-Modul PPT ELKAPEDE KKA
+    </button>
 
-  <!-- VIDEO BOLEH IFRAME -->
-  <button tabindex="0" onclick="location.href='https://www.youtube.com/embed/VIDEO_ID'">
-    🎥 Video Tutorial
-  </button>
+    <button onclick="openLink('https://www.youtube.com/watch?v=VAGAVAhvAp4&list=PLX2AbBK_Gx9vuRC0rlvrufn0GwiJ1Hw8x')">
+      🎥 Video Tutorial Scratch & Blockly
+    </button>
 
-  <!-- FLIPBOOK -->
-  <button tabindex="0" onclick="location.href='https://online.fliphtml5.com/XXXXX/'">
-    📄 E-Modul / PDF
-  </button>
-</div>
+    <button onclick="openLink('https://www.youtube.com/watch?v=sw1k_OcExYQ&list=PLX2AbBK_Gx9uE6qhbUs4D6EZTST5M-4zH')">
+      🎬 Video Pembelajaran ELKAPEDE
+    </button>
 
-<div class="note">
-  Gunakan tombol BACK pada remote / browser untuk kembali ke menu utama
-</div>
+    <button onclick="openLink('assets/pdf/pg-elkepede-guru.pdf')">
+      📄 E-Modul (PDF Pegangan Guru)
+    </button>
 
-<script>
-  // Fokus otomatis untuk Smart TV
-  window.onload = () => {
-    const firstButton = document.querySelector('button');
-    if (firstButton) firstButton.focus();
-  };
-</script>
+    <button onclick="openLink('assets/pdf/tutorial-scratch-kera.pdf')">
+      📄 Tutorial Scratch (PDF)
+    </button>
 
+    <button onclick="openLink('assets/pdf/tutorial-video-chatgpt-canva.pdf')">
+      📄 Tutorial Video ChatGPT & Canva
+    </button>
+  </main>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
