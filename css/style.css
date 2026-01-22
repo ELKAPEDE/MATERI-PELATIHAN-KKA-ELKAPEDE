@@ -13,8 +13,14 @@ header {
   background: #102a43;
 }
 
-header img {
-  height: 80px;
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-group img {
+  height: 70px;
 }
 
 header h1 {
