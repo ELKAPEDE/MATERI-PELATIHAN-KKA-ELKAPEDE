@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning Hub Sekolah - Smart TV</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #ffffff;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #020617;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      margin: 40px auto;
+      gap: 20px;
+    }
+    button {
+      padding: 25px;
+      font-size: 22px;
+      border: none;
+      border-radius: 12px;
+      background: #1e293b;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:focus {
+      outline: 4px solid #38bdf8;
+      background: #334155;
+    }
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+    .back {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 15px 20px;
+      font-size: 18px;
+      background: #ef4444;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>LEARNING HUB SEKOLAH<br><small>Pascapelatihan</small></header>
+
+<div class="menu" id="menu">
+  <button tabindex="0" onclick="openContent('https://www.canva.com/design/DAG90rWtbe8/view')">Materi Guru</button>
+  <button tabindex="0" onclick="openContent('https://www.canva.com/design/DAG-q0S-SA4/view')">Materi Siswa</button>
+  <button tabindex="0" onclick="openContent('https://www.canva.com/design/DAG-Nn60U5c/view')">ELKAPEDE Kelas 5 SMT 2</button>
+  <button tabindex="0" onclick="openContent('https://www.youtube.com/embed/VIDEO_ID')">Video Tutorial</button>
+  <button tabindex="0" onclick="openContent('https://online.fliphtml5.com/XXXXX/')">E‑Modul / PDF</button>
+</div>
+
+<script>
+  function openContent(url) {
+    document.body.innerHTML = `
+      <button class="back" onclick="location.reload()">⬅ Kembali</button>
+      <iframe src="${url}" allowfullscreen></iframe>
+    `;
+  }
+
+  // Fokus otomatis untuk Smart TV
+  window.onload = () => {
+    const firstButton = document.querySelector('button');
+    if (firstButton) firstButton.focus();
+  };
+</script>
+
+</body>
+</html>
