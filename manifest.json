@@ -1,10 +1,10 @@
 {
-  "name": "ELKAPEDE – Evaluasi Lengkap Pembelajaran Deduktif",
+  "name": "ELKAPEDE",
   "short_name": "ELKAPEDE",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#ffffff",
+  "theme_color": "#000000",
   "orientation": "landscape",
   "icons": [
     {
@@ -14,4 +14,3 @@
     }
   ]
 }
-
