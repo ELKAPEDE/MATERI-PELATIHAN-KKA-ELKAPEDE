@@ -6,35 +6,28 @@ body {
 }
 
 header {
-  text-align: center;
   padding: 20px;
+  text-align: center;
   background: #020617;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 32px;
-}
-
-header p {
-  margin-top: 8px;
-  color: #cbd5f5;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .menu {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 40px auto;
   gap: 20px;
-  padding: 30px;
 }
 
 button {
-  padding: 20px;
-  font-size: 18px;
+  padding: 25px;
+  font-size: 22px;
   border: none;
-  border-radius: 14px;
-  background: #1e40af;
-  color: white;
+  border-radius: 12px;
+  background: #1e293b;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -43,4 +36,3 @@ button:focus {
   background: #2563eb;
   outline: none;
 }
-
