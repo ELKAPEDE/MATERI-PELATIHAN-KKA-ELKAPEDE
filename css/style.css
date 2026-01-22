@@ -21,11 +21,16 @@ header {
   gap: 20px;
 }
 
+a {
+  text-decoration: none;
+}
+
 button {
+  width: 100%;
   padding: 25px;
   font-size: 22px;
   border: none;
-  border-radius: 12px;
+  border-radius: 14px;
   background: #1e293b;
   color: #ffffff;
   cursor: pointer;
