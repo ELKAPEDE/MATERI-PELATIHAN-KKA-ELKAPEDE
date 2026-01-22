@@ -1,9 +1,9 @@
 /* =========================
-   GLOBAL SMART TV SCALE
+   GLOBAL
    ========================= */
 :root {
-  --scale: 1.8;          /* ukuran keseluruhan */
-  --bg-color: #000000;   /* background hitam */
+  --scale: 1.8;
+  --bg-color: #000000;
   --text-color: #ffffff;
 }
 
@@ -16,6 +16,7 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 
   transform: scale(var(--scale));
   transform-origin: top center;
@@ -27,7 +28,6 @@ body {
 header {
   background: #ffffff;
   color: #000000;
-  text-align: center;
   padding: 24px 16px;
 }
 
@@ -40,7 +40,7 @@ header {
 }
 
 .logo-group img {
-  height: 64px;       /* aman, tidak meledak */
+  height: 64px;
   max-width: 120px;
   object-fit: contain;
 }
@@ -63,7 +63,7 @@ header h1 {
 }
 
 /* =========================
-   BUTTON STYLE
+   BUTTON
    ========================= */
 a {
   text-decoration: none;
@@ -98,13 +98,12 @@ button:hover {
    ICON & TEXT
    ========================= */
 .icon {
-  font-size: 4.5rem;   /* IKON BESAR */
+  font-size: 4.5rem;
   line-height: 1;
 }
 
 .text {
-  font-size: 1.6rem;   /* FONT BESAR */
-  text-align: center;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
