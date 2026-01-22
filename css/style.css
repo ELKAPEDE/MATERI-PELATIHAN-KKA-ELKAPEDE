@@ -1,68 +1,78 @@
+/* ===== GLOBAL ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f6f8;
+  background: #000000; /* HITAM */
+  color: white;
   text-align: center;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 .header {
-  background: #003366;
-  color: white;
-  padding: 20px;
+  background: #ffffff; /* PUTIH */
+  color: #000000;
+  padding: 24px;
 }
 
 .header h1 {
-  font-size: 20px;
-  margin-top: 10px;
+  font-size: 36px; /* BESAR */
+  margin: 16px 0 0 0;
+  font-weight: bold;
 }
 
-/* LOGO */
+/* ===== LOGO ===== */
 .logo-group {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 32px;
 }
 
 .logo-group img {
-  max-height: 70px;
+  max-height: 80px;   /* AMAN & BESAR */
   width: auto;
   object-fit: contain;
 }
 
-/* MENU GRID */
+/* ===== GRID MENU ===== */
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 20px;
-  padding: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  padding: 40px;
 }
 
-/* BUTTON */
+/* ===== BUTTON MENU ===== */
 .menu-btn {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
+  background: #111111;
+  border-radius: 20px;
+  padding: 40px 20px;
   text-decoration: none;
-  color: #003366;
-  font-size: 28px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  color: #ffffff;
+  font-size: 84px; /* IKON 3X */
+  box-shadow: 0 6px 14px rgba(255,255,255,0.15);
+  transition: transform 0.15s ease;
+}
+
+.menu-btn:hover {
+  transform: scale(1.05);
 }
 
 .menu-btn span {
   display: block;
-  font-size: 14px;
-  margin-top: 8px;
+  font-size: 36px; /* FONT 3X */
+  margin-top: 16px;
 }
 
-/* BACK BUTTON */
+/* ===== BACK BUTTON ===== */
 .back-btn {
   display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  background: white;
-  color: #003366;
-  border-radius: 8px;
+  margin-top: 20px;
+  padding: 14px 28px;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 12px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 24px;
+  border: 2px solid #ffffff;
 }
