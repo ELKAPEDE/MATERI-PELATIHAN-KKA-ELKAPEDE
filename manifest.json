@@ -1,1 +1,17 @@
+{
+  "name": "ELKAPEDE – Evaluasi Lengkap Pembelajaran Deduktif",
+  "short_name": "ELKAPEDE",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ffffff",
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "assets/logo/logo-gph.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
 
