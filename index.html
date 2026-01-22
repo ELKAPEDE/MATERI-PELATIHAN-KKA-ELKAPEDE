@@ -38,42 +38,51 @@
       outline: 4px solid #38bdf8;
       background: #334155;
     }
-    iframe {
-      width: 100vw;
-      height: 100vh;
-      border: none;
-    }
-    .back {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      padding: 15px 20px;
-      font-size: 18px;
-      background: #ef4444;
-      border-radius: 10px;
+    .note {
+      text-align: center;
+      font-size: 16px;
+      opacity: 0.7;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
-<header>LEARNING HUB SEKOLAH<br><small>Pascapelatihan</small></header>
+<header>
+  LEARNING HUB SEKOLAH<br>
+  <small style="font-size:16px;font-weight:normal;">Pascapelatihan</small>
+</header>
 
-<div class="menu" id="menu">
-  <button tabindex="0" onclick="openContent('https://www.canva.com/design/DAG90rWtbe8/view')">Materi Guru</button>
-  <button tabindex="0" onclick="openContent('https://www.canva.com/design/DAG-q0S-SA4/view')">Materi Siswa</button>
-  <button tabindex="0" onclick="openContent('https://www.canva.com/design/DAG-Nn60U5c/view')">ELKAPEDE Kelas 5 SMT 2</button>
-  <button tabindex="0" onclick="openContent('https://www.youtube.com/embed/VIDEO_ID')">Video Tutorial</button>
-  <button tabindex="0" onclick="openContent('https://online.fliphtml5.com/XXXXX/')">E‑Modul / PDF</button>
+<div class="menu">
+  <!-- CANVA DIBUKA DI TAB BARU (ANTI REFUSE) -->
+  <button tabindex="0" onclick="location.href='https://www.canva.com/design/DAG90rWtbe8/view'">
+    📘 Materi Guru
+  </button>
+
+  <button tabindex="0" onclick="location.href='https://www.canva.com/design/DAG-q0S-SA4/view'">
+    👨‍🎓 Materi Siswa
+  </button>
+
+  <button tabindex="0" onclick="location.href='https://www.canva.com/design/DAG-Nn60U5c/view'">
+    💻 ELKAPEDE Kelas 5 SMT 2
+  </button>
+
+  <!-- VIDEO BOLEH IFRAME -->
+  <button tabindex="0" onclick="location.href='https://www.youtube.com/embed/VIDEO_ID'">
+    🎥 Video Tutorial
+  </button>
+
+  <!-- FLIPBOOK -->
+  <button tabindex="0" onclick="location.href='https://online.fliphtml5.com/XXXXX/'">
+    📄 E-Modul / PDF
+  </button>
+</div>
+
+<div class="note">
+  Gunakan tombol BACK pada remote / browser untuk kembali ke menu utama
 </div>
 
 <script>
-  function openContent(url) {
-    document.body.innerHTML = `
-      <button class="back" onclick="location.reload()">⬅ Kembali</button>
-      <iframe src="${url}" allowfullscreen></iframe>
-    `;
-  }
-
   // Fokus otomatis untuk Smart TV
   window.onload = () => {
     const firstButton = document.querySelector('button');
