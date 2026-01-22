@@ -1,78 +1,118 @@
-/* ===== GLOBAL ===== */
+/* =========================
+   GLOBAL SMART TV SCALE
+   ========================= */
+:root {
+  --scale: 1.8;          /* ukuran keseluruhan */
+  --bg-color: #000000;   /* background hitam */
+  --text-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #000000; /* HITAM */
-  color: white;
-  text-align: center;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, Helvetica, sans-serif;
+
+  transform: scale(var(--scale));
+  transform-origin: top center;
 }
 
-/* ===== HEADER ===== */
-.header {
-  background: #ffffff; /* PUTIH */
+/* =========================
+   HEADER
+   ========================= */
+header {
+  background: #ffffff;
   color: #000000;
-  padding: 24px;
+  text-align: center;
+  padding: 24px 16px;
 }
 
-.header h1 {
-  font-size: 36px; /* BESAR */
-  margin: 16px 0 0 0;
-  font-weight: bold;
-}
-
-/* ===== LOGO ===== */
 .logo-group {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
+  margin-bottom: 12px;
 }
 
 .logo-group img {
-  max-height: 80px;   /* AMAN & BESAR */
-  width: auto;
+  height: 64px;       /* aman, tidak meledak */
+  max-width: 120px;
   object-fit: contain;
 }
 
-/* ===== GRID MENU ===== */
-.menu-grid {
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+/* =========================
+   MENU GRID
+   ========================= */
+.menu {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 32px;
-  padding: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 32px;
 }
 
-/* ===== BUTTON MENU ===== */
-.menu-btn {
-  background: #111111;
-  border-radius: 20px;
-  padding: 40px 20px;
+/* =========================
+   BUTTON STYLE
+   ========================= */
+a {
   text-decoration: none;
-  color: #ffffff;
-  font-size: 84px; /* IKON 3X */
-  box-shadow: 0 6px 14px rgba(255,255,255,0.15);
-  transition: transform 0.15s ease;
 }
 
-.menu-btn:hover {
+button {
+  width: 100%;
+  height: 100%;
+  background: #111;
+  color: #fff;
+  border: 2px solid #333;
+  border-radius: 16px;
+  padding: 32px 24px;
+
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+  background: #1e1e1e;
   transform: scale(1.05);
 }
 
-.menu-btn span {
-  display: block;
-  font-size: 36px; /* FONT 3X */
-  margin-top: 16px;
+/* =========================
+   ICON & TEXT
+   ========================= */
+.icon {
+  font-size: 4.5rem;   /* IKON BESAR */
+  line-height: 1;
 }
 
-/* ===== BACK BUTTON ===== */
-.back-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 28px;
-  background: #000000;
-  color: #ffffff;
-  border-radius: 12px;
-  text-decoration: none;
-  font-size: 24px;
-  border: 2px solid #ffffff;
+.text {
+  font-size: 1.6rem;   /* FONT BESAR */
+  text-align: center;
+  font-weight: 600;
+}
+
+/* =========================
+   RESPONSIVE SAFETY
+   ========================= */
+@media (max-width: 1280px) {
+  :root {
+    --scale: 1.4;
+  }
 }
