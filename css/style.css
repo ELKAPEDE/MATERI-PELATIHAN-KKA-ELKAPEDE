@@ -52,66 +52,43 @@ header h1 {
   line-height: 1.3;
 }
 
-/* =========================
-   MENU GRID
-   ========================= */
-.menu {
+/* ===== MENU GRID SMART TV ===== */
+.menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;   /* 1 kolom = 3 ke bawah */
   gap: 24px;
   padding: 32px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* =========================
-   BUTTON
-   ========================= */
-a {
-  text-decoration: none;
-}
-
-button {
-  width: 100%;
-  height: 100%;
+/* ===== BUTTON MENU ===== */
+.menu-btn {
   background: #111;
-  color: #fff;
-  border: 2px solid #333;
-  border-radius: 16px;
-  padding: 32px 24px;
-
-  cursor: pointer;
+  border-radius: 18px;
+  padding: 28px 20px;
 
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 20px;
 
-  transition: transform 0.2s ease, background 0.2s ease;
+  font-size: 28px;  /* teks dikecilkan */
+  color: white;
+  text-decoration: none;
+
+  box-shadow: 0 6px 14px rgba(255,255,255,0.12);
 }
 
-button:hover {
+/* ===== ICON ===== */
+.menu-btn .icon,
+.menu-btn::first-letter {
+  font-size: 48px;   /* ikon lebih kecil */
+}
+
+/* ===== HOVER (REMOTE SAFE) ===== */
+.menu-btn:hover {
   background: #1e1e1e;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
-
-/* =========================
-   ICON & TEXT
-   ========================= */
-.icon {
-  font-size: 4.5rem;
-  line-height: 1;
-}
-
-.text {
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-
-/* =========================
-   RESPONSIVE SAFETY
-   ========================= */
-@media (max-width: 1280px) {
-  :root {
-    --scale: 1.4;
-  }
 }
